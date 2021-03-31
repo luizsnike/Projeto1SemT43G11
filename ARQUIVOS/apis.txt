@@ -1,0 +1,58 @@
+-------------------------------- API LOGIN
+GET
+api/login
+{
+	"user_email":"email@email.com.br",
+	"user_password":"password"
+}
+
+para o Status 200 retorna um json
+{
+	"user_name":"Usuario X"
+	"user_email":"email@email.com.br",
+	"user_password":"password"
+}
+
+Para qualquer Status diferente de 200 redirecinar para tela de cadastro
+
+-------------------------------- API CDASTRO
+POST
+api/cadastro
+{
+	"user_name":"Usuario X"
+	"user_email":"email@email.com.br",
+	"user_password":"password"
+}
+
+retorno da chamada
+
+para o status 200 mensagem cadastrado com sucesso e redirecinar para tela de rifas
+
+Para qualquer Status diferente de 200 exibir mensagem de erro para o usuário
+
+
+-------------------------------- API PARA LISTAR TODOS OS ITENS PARA RIFA
+GET
+api/allRifas
+
+-------------------------------- API PARA PAGAMENTO
+POST
+api/pagto
+
+{
+	"user_email":"email@email.com.br",
+	"value_pagto":"9999.00",
+	"rifasSelected":[{<parametros a definir>}]
+}
+
+-------------------------------- API PARA RIFA JÁ CADASTRADA
+GET
+api/allRifas/validateToken?{token}
+
+para o status 200 será retorna a lista que compem o token e usuário será redirecinado para tela 
+com as rifas cadastradas para aquele token
+
+Para qualquer Status diferente de 200 exibir mensagem de token invalido e redirecinar para home
+
+
+
